@@ -149,6 +149,7 @@ class PortfolioData {
     'Contributed to 15% revenue growth at BeyondWalls (PropTech)',
     'Automated CI/CD with Jenkins & GitHub Actions across multiple apps',
     'Integrated Agora SDK for real-time PTT & VoIP calling features',
+    'Built emergency panic mode with live location streaming, auto VoIP alerts & real-time officer tracking',
     'Shipped 5+ live apps to Play Store and App Store',
     'Mentored and onboarded new Flutter developers',
   ];
@@ -221,7 +222,8 @@ class PortfolioData {
       title: 'Smart Force Police App',
       description:
           'Government-grade police management system deployed across multiple states. '
-          'Onboarded 50,000+ users, manages 2.2M+ records, real-time communication, '
+          'Onboarded 50,000+ users, manages 2.2M+ records, real-time PTT & VoIP communication, '
+          'panic mode with live location tracking & auto-alerts, '
           'multi-state deployment (Goa, Delhi, Assam).',
       tags: ['Flutter', 'Firebase', 'Agora', 'BLoC', 'WebSockets'],
       gradientStart: Color(0xFF7C3AED),
@@ -313,7 +315,14 @@ class PortfolioData {
       title: 'Mobile Development',
       color: AppColors.catMobile,
       icon: Icons.phone_android_rounded,
-      skills: ['Flutter', 'Dart', 'Android Studio', 'Xcode'],
+      skills: [
+        'Flutter',
+        'Dart',
+        'Android Studio',
+        'Xcode',
+        'Google Play Console',
+        'Apple Developer Account',
+      ],
     ),
     SkillCategory(
       title: 'State Management',
@@ -333,6 +342,12 @@ class PortfolioData {
         'Postman',
         'FCM',
       ],
+    ),
+    SkillCategory(
+      title: 'Local Databases',
+      color: Color(0xFF10B981),
+      icon: Icons.storage_rounded,
+      skills: ['Hive', 'SharedPreferences', 'GetStorage', 'MMKV', 'SQLite'],
     ),
     SkillCategory(
       title: 'Payment Gateways',
@@ -362,7 +377,12 @@ class PortfolioData {
       title: 'Testing',
       color: AppColors.catTesting,
       icon: Icons.bug_report_rounded,
-      skills: ['Unit Testing', 'Integration Testing', 'Golden Image Testing'],
+      skills: [
+        'Unit Testing',
+        'Widget Testing',
+        'Integration Testing',
+        'Golden Image Testing',
+      ],
     ),
     SkillCategory(
       title: 'Other Tools',
@@ -370,6 +390,17 @@ class PortfolioData {
       icon: Icons.build_rounded,
       skills: [
         'Agora SDK',
+        'Google Sign In',
+        'WebView',
+        'Geolocator',
+        'Live Location Tracking',
+        'Audio Player',
+        'ML Kit OCR',
+        'Root Detection',
+        'VoIP CallKit',
+        'Live Streaming',
+        'Noise Meter',
+        'Panic Mode Alerts',
         'Certificate Pinning',
         'Gemini AI',
         'Google Maps',
