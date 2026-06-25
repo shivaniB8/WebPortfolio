@@ -81,6 +81,7 @@ class CertificationModel {
   final String year;
   final IconData icon;
   final Color color;
+  final String? url;
 
   const CertificationModel({
     required this.title,
@@ -88,6 +89,7 @@ class CertificationModel {
     required this.year,
     required this.icon,
     required this.color,
+    this.url,
   });
 }
 
@@ -281,9 +283,9 @@ class PortfolioData {
       icon: Icons.psychology_rounded,
     ),
     ProjectModel(
-      title: 'SoundMixer',
+      title: 'Noava — Sound Mixer',
       description:
-          'Ambient sound mixer with customizable timer, preset scenes, '
+          'Ambient sound mixer app with customizable timer, preset scenes, '
           'and layered audio for focus, sleep, and relaxation.',
       tags: ['Flutter', 'Audio'],
       githubUrl: 'https://github.com/shivaniB8/SoundMixer',
@@ -416,6 +418,7 @@ class PortfolioData {
       year: '2020',
       icon: Icons.support_agent_rounded,
       color: Color(0xFF4285F4),
+      url: 'https://www.coursera.org/professional-certificates/google-it-support?action=enroll',
     ),
     CertificationModel(
       title: 'Architecting with Google Compute Engine',
@@ -423,6 +426,7 @@ class PortfolioData {
       year: '2021',
       icon: Icons.cloud_done_rounded,
       color: Color(0xFF34A853),
+      url: 'https://www.coursera.org/specializations/gcp-architecture',
     ),
     CertificationModel(
       title: 'Gemini-Powered Flutter App',

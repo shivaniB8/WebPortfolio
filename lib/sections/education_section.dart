@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 import '../data/portfolio_data.dart';
 import '../theme/colors.dart';
@@ -288,69 +289,89 @@ class _CertificationsGrid extends StatelessWidget {
                           visible ? Offset.zero : const Offset(0, 0.2),
                       duration: Duration(milliseconds: 600 + delay),
                       curve: Curves.easeOutCubic,
-                      child: GlassCard(
-                        hoverGlow: true,
-                        glowColor: cert.color,
-                        padding: const EdgeInsets.all(20),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              width: 44,
-                              height: 44,
-                              decoration: BoxDecoration(
-                                color: cert.color.withOpacity(0.15),
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(
-                                  color: cert.color.withOpacity(0.4),
-                                ),
-                              ),
-                              child: Icon(cert.icon,
-                                  color: cert.color, size: 22),
-                            ),
-                            const SizedBox(height: 14),
-                            Text(
-                              cert.title,
-                              style: GoogleFonts.raleway(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                color: AppColors.textPrimary,
-                              ),
-                            ),
-                            const SizedBox(height: 6),
-                            Row(
+                      child: GestureDetector(
+                        onTap: cert.url != null
+                            ? () => launchUrl(Uri.parse(cert.url!),
+                                mode: LaunchMode.externalApplication)
+                            : null,
+                        child: MouseRegion(
+                          cursor: cert.url != null
+                              ? SystemMouseCursors.click
+                              : MouseCursor.defer,
+                          child: GlassCard(
+                            hoverGlow: true,
+                            glowColor: cert.color,
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Icon(Icons.business_rounded,
-                                    size: 13, color: cert.color),
-                                const SizedBox(width: 5),
+                                Row(
+                                  children: [
+                                    Container(
+                                      width: 44,
+                                      height: 44,
+                                      decoration: BoxDecoration(
+                                        color: cert.color.withOpacity(0.15),
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(
+                                          color: cert.color.withOpacity(0.4),
+                                        ),
+                                      ),
+                                      child: Icon(cert.icon,
+                                          color: cert.color, size: 22),
+                                    ),
+                                    const Spacer(),
+                                    if (cert.url != null)
+                                      Icon(Icons.open_in_new_rounded,
+                                          size: 16,
+                                          color: cert.color.withOpacity(0.7)),
+                                  ],
+                                ),
+                                const SizedBox(height: 14),
                                 Text(
-                                  cert.issuer,
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 12.5,
-                                    color: cert.color,
-                                    fontWeight: FontWeight.w600,
+                                  cert.title,
+                                  style: GoogleFonts.raleway(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.textPrimary,
                                   ),
                                 ),
-                                const Spacer(),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 8, vertical: 3),
-                                  decoration: BoxDecoration(
-                                    color: cert.color.withOpacity(0.12),
-                                    borderRadius: BorderRadius.circular(50),
-                                  ),
-                                  child: Text(
-                                    cert.year,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 11,
-                                      color: cert.color,
-                                      fontWeight: FontWeight.w600,
+                                const SizedBox(height: 6),
+                                Row(
+                                  children: [
+                                    Icon(Icons.business_rounded,
+                                        size: 13, color: cert.color),
+                                    const SizedBox(width: 5),
+                                    Text(
+                                      cert.issuer,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 12.5,
+                                        color: cert.color,
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                     ),
-                                  ),
+                                    const Spacer(),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 8, vertical: 3),
+                                      decoration: BoxDecoration(
+                                        color: cert.color.withOpacity(0.12),
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                      child: Text(
+                                        cert.year,
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 11,
+                                          color: cert.color,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                          ],
+                          ),
                         ),
                       ),
                     ),

@@ -3,11 +3,11 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "f8da1c117d26770ece692476a582260e",
+const RESOURCES = {"flutter_bootstrap.js": "3220eee3f6f9bb2b2d37d8dfe820e980",
 "version.json": "43c8c6c68920f6175520e60cf8deade2",
-"index.html": "48f4ebb7eee1c6bd39a744be57847811",
-"/": "48f4ebb7eee1c6bd39a744be57847811",
-"main.dart.js": "5eeec451218ae93797dd70d7bd4c2054",
+"index.html": "098e101f47b337fc08df221751ba0298",
+"/": "098e101f47b337fc08df221751ba0298",
+"main.dart.js": "6db0eafa23b63e0d3ab3403cae9b523f",
 "flutter.js": "76f08d47ff9f5715220992f993002504",
 "_redirects": "24451388c2fc69419fac47ca08311257",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
@@ -25,6 +25,7 @@ const RESOURCES = {"flutter_bootstrap.js": "f8da1c117d26770ece692476a582260e",
 "assets/AssetManifest.bin": "428b864d08dc723fd602d1bf12ef0c8b",
 "assets/fonts/MaterialIcons-Regular.otf": "85c6fa43f7ee46153da179e9b2e1c05d",
 "assets/assets/shivani.jpeg": "b505a5c772f2071827e4b38cbb38784a",
+"favicon.svg": "c8c7a4cebaf48e36039ac61360175c43",
 "canvaskit/skwasm_st.js": "d1326ceef381ad382ab492ba5d96f04d",
 "canvaskit/skwasm.js": "f2ad9363618c5f62e813740099a80e63",
 "canvaskit/skwasm.js.symbols": "80806576fa1056b43dd6d0b445b4b6f7",
