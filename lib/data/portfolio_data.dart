@@ -227,21 +227,22 @@ class PortfolioData {
       icon: Icons.security_rounded,
     ),
     ProjectModel(
-      title: 'Visitor Connect',
+      title: 'Tourist Track',
       description:
-          'Smart Tourism Platform for tourism authorities. Digital visitor passes, '
-          'visa monitoring, travel history tracking and analytics dashboard.',
+          'A tourism management app built for authorities to manage and monitor '
+          'tourist records, digital entry passes, travel history and visitor analytics.',
       tags: ['Flutter', 'Firebase', 'REST APIs', 'Google Maps'],
       gradientStart: Color(0xFF06B6D4),
       gradientEnd: Color(0xFF0284C7),
       icon: Icons.travel_explore_rounded,
     ),
     ProjectModel(
-      title: 'Bharat Messenger',
+      title: 'ChatApp — WhatsApp Style',
       description:
-          'Full-featured real-time messaging app with Firebase authentication, '
-          'instant messaging, push notifications, and media sharing.',
-      tags: ['Flutter', 'Firebase', 'WebSockets'],
+          'A WhatsApp-like real-time chat app built with Flutter and Firebase. '
+          'Features include user authentication, one-on-one messaging, group chats, '
+          'push notifications, online/offline status, and media sharing.',
+      tags: ['Flutter', 'Firebase', 'Firestore', 'FCM', 'Real-time'],
       gradientStart: Color(0xFF10B981),
       gradientEnd: Color(0xFF059669),
       icon: Icons.chat_bubble_rounded,
@@ -289,6 +290,17 @@ class PortfolioData {
       gradientStart: Color(0xFF06B6D4),
       gradientEnd: Color(0xFF7C3AED),
       icon: Icons.music_note_rounded,
+    ),
+    ProjectModel(
+      title: 'Manga Reader',
+      description:
+          'A mobile manga reading app with a clean reader experience. '
+          'Browse, search and read manga chapters on your phone with smooth '
+          'page transitions, offline support, and a bookmark system.',
+      tags: ['Flutter', 'REST APIs', 'Dart', 'Mobile'],
+      gradientStart: Color(0xFFEF4444),
+      gradientEnd: Color(0xFFB91C1C),
+      icon: Icons.menu_book_rounded,
     ),
   ];
 
